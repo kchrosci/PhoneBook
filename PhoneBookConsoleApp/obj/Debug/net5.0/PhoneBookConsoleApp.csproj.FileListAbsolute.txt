@@ -1,0 +1,16 @@
+D:\.Net\PhoneBook\PhoneBookConsoleApp\bin\Debug\net5.0\PhoneBookConsoleApp.exe
+D:\.Net\PhoneBook\PhoneBookConsoleApp\bin\Debug\net5.0\PhoneBookConsoleApp.deps.json
+D:\.Net\PhoneBook\PhoneBookConsoleApp\bin\Debug\net5.0\PhoneBookConsoleApp.runtimeconfig.json
+D:\.Net\PhoneBook\PhoneBookConsoleApp\bin\Debug\net5.0\PhoneBookConsoleApp.runtimeconfig.dev.json
+D:\.Net\PhoneBook\PhoneBookConsoleApp\bin\Debug\net5.0\PhoneBookConsoleApp.dll
+D:\.Net\PhoneBook\PhoneBookConsoleApp\bin\Debug\net5.0\ref\PhoneBookConsoleApp.dll
+D:\.Net\PhoneBook\PhoneBookConsoleApp\bin\Debug\net5.0\PhoneBookConsoleApp.pdb
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\PhoneBookConsoleApp.csproj.AssemblyReference.cache
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\PhoneBookConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\PhoneBookConsoleApp.AssemblyInfoInputs.cache
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\PhoneBookConsoleApp.AssemblyInfo.cs
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\PhoneBookConsoleApp.csproj.CoreCompileInputs.cache
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\PhoneBookConsoleApp.dll
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\ref\PhoneBookConsoleApp.dll
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\PhoneBookConsoleApp.pdb
+D:\.Net\PhoneBook\PhoneBookConsoleApp\obj\Debug\net5.0\PhoneBookConsoleApp.genruntimeconfig.cache

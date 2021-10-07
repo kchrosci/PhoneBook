@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PhoneBookConsoleApp
 { 
@@ -6,14 +7,29 @@ namespace PhoneBookConsoleApp
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Welcome to Phone Book program!");
+			Console.WriteLine("Welcome to PhoneBook program!");
 			Information();
 			int decision = int.Parse(Console.ReadLine());
+			Dictionary<string, PhoneContact> phoneBook = new Dictionary<string, PhoneContact>();
 			while (decision != 0)
 			{
-				PhoneContact phoneContact = new PhoneContact("Jano", "123123123131");
-
-
+				if(decision == (int)ChoiceEnum.Add)
+				{
+					Services.AddContact(phoneBook);
+				}
+				else if(decision == (int)ChoiceEnum.ShowByNr)
+				{
+					Services.ShowByNr(phoneBook);
+				}
+				else if(decision == (int)ChoiceEnum.ShowAll)
+				{
+					Services.ShowAll(phoneBook);
+				}
+				else if (decision == (int)ChoiceEnum.Search)
+				{
+					Services.Search(phoneBook);
+				}
+				
 				Information();
 				decision = int.Parse(Console.ReadLine());
 			}

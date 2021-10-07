@@ -18,10 +18,8 @@ namespace PhoneBookConsoleApp
 			}
 			set
 			{
-				if (int.Parse(value) < 12)
-					_phoneName = value;
-				else
-					throw new InvalidOperationException();
+				//LOGIC TO BE IMPLEMENTED
+				_phoneName = value;
 			}
 		}
 		public string PhoneNumber
