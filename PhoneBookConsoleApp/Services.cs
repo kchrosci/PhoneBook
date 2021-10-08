@@ -26,12 +26,36 @@ namespace PhoneBookConsoleApp
 
 		internal static void ShowByNr(Dictionary<string, PhoneContact> phoneBook)
 		{
-			throw new NotImplementedException();
+			Console.Clear();
+			Console.WriteLine("Show a contact by phone number.");
+			Console.Write("Insert number: ");
+			var number = Console.ReadLine(); ;
+			Console.WriteLine("Checking...");
+
+			var searchResult = phoneBook.TryGetValue(number, out PhoneContact phoneContact);
+
+			if(searchResult)
+					Console.WriteLine($"Number {phoneContact.PhoneNumber} was found. It is assigned to {phoneContact.PhoneName}");
+			else
+				Console.WriteLine($"Number {number} was NOT found in Contact book.");
+			Console.WriteLine("Press key to continue!");
+			Console.ReadLine();
+			Console.Clear();
 		}
 
 		internal static void ShowAll(Dictionary<string, PhoneContact> phoneBook)
 		{
-			throw new NotImplementedException();
+			Console.Clear();
+			Console.WriteLine("Displaying whole Contact book...");
+
+			foreach(var user in phoneBook)
+			{
+				Console.WriteLine($"Name: {user.Value.PhoneName}, Number: {user.Key}");
+			}
+
+			Console.WriteLine("Press key to continue!");
+			Console.ReadLine();
+			Console.Clear();
 		}
 
 		internal static void Search(Dictionary<string, PhoneContact> phoneBook)
@@ -41,10 +65,15 @@ namespace PhoneBookConsoleApp
 			Console.Write("Insert his name: ");
 			var name = Console.ReadLine();;
 			Console.WriteLine("Checking...");
-			var result = phoneBook.TryGetValue(name, out PhoneContact phoneContact);
 			
-			if(result)
-				Console.WriteLine($"User {phoneContact.PhoneName} was found. His number {phoneContact.PhoneNumber}");
+			var searchResult = phoneBook.Where(p => p.Value.PhoneName == name);
+			Console.WriteLine($"Found {searchResult.Count()}");
+			
+			if(searchResult.Any())
+				foreach(var user in searchResult)
+				{
+					Console.WriteLine($"User {user.Value.PhoneName} was found. His number {user.Value.PhoneNumber}");
+				}			
 			else
 				Console.WriteLine($"User {name} was NOT found.");
 			

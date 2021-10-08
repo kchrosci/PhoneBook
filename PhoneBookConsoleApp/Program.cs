@@ -8,9 +8,9 @@ namespace PhoneBookConsoleApp
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Welcome to PhoneBook program!");
+			Dictionary<string, PhoneContact> phoneBook = ContactsSeeder();
 			Information();
-			int decision = int.Parse(Console.ReadLine());
-			Dictionary<string, PhoneContact> phoneBook = new Dictionary<string, PhoneContact>();
+			int decision = int.Parse(Console.ReadLine());	
 			while (decision != 0)
 			{
 				if(decision == (int)ChoiceEnum.Add)
@@ -28,12 +28,28 @@ namespace PhoneBookConsoleApp
 				else if (decision == (int)ChoiceEnum.Search)
 				{
 					Services.Search(phoneBook);
-				}
-				
+				}			
 				Information();
-				decision = int.Parse(Console.ReadLine());
+				var result = int.TryParse(Console.ReadLine(),out decision);
+				if(!result)
+				{
+					Console.WriteLine("Bad input format.");
+				}	
 			}
 		}
+
+		private static Dictionary<string, PhoneContact> ContactsSeeder()
+		{
+			return new Dictionary<string, PhoneContact>()
+			{
+				{"965832147", new PhoneContact("Jan","965832147")},
+				{"895832147", new PhoneContact("Kamil","895832147")},
+				{"365822147", new PhoneContact("Andrzej","365822147")},
+				{"115832147", new PhoneContact("Paweł","115832147")},
+				{"965832545", new PhoneContact("Jan","965832545")},
+			};
+		}
+
 		public static void Information()
 		{
 			Console.WriteLine("Please input a number depending on your choice: ");

@@ -35,8 +35,8 @@ namespace PhoneBookConsoleApp
 		}
 		public PhoneContact(string phoneName, string phoneNumber)
 		{
-			PhoneName = phoneName;
-			PhoneNumber = phoneNumber;
+			_phoneName = phoneName;
+			_phoneNumber = phoneNumber;
 		}
 	}
 }
